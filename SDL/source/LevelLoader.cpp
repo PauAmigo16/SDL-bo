@@ -32,7 +32,7 @@ void LevelLoader::LoadLevel(std::string path, GameplayScene* myGameplay)
 	//std::vector<GameObject*> tiles;
 	rapidxml::xml_node<>* pRoot = doc.first_node();
 
-	myGameplay->maxTime = stof((std::string)pRoot->first_node()->value());
+	myGameplay->maxTime = stof((std::string)pRoot->first_node("MaxTime")->value());
 	//dynamic_cast<TimeBar*>(gamelay->gameUI.find("timeBar")->second)->SetMaxTime(stof((std::string)pRoot->first_node()->value()));
 	pRoot = pRoot->first_node("Layout");
 

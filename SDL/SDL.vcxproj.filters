@@ -84,6 +84,9 @@
     <ClCompile Include="source\Turtle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\RiverSpawner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\GameEngine.h">
@@ -143,16 +146,22 @@
     <ClInclude Include="source\LevelLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Turtle.h">
+    <ClInclude Include="source\Spawner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Log.h">
+    <ClInclude Include="source\Log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RIverObject.h">
+    <ClInclude Include="source\RIverObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RoadObject.h">
+    <ClInclude Include="source\RoadObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Turtle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\RiverSpawner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
