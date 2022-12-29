@@ -1,9 +1,10 @@
 #pragma once
 #include "Vector2.h"
+#include "GameplayScene.h"
 
 class Spawner
 {
-private:
+protected:
 	float maxSpawnTime;
 	float minSpawnTime;
 	float eTime;
@@ -12,8 +13,8 @@ private:
 	Vector2 startPosition;
 
 public:
-	Spawner(float maxTime, float minTime, float e, float startV, Vector2 startP)
-		: maxSpawnTime(maxTime), minSpawnTime(minTime), eTime(e), startVelocity(startV), startPosition(startP) {}
+	Spawner(float maxT, float minT, float e, float startV, Vector2 startP)
+		: maxSpawnTime(maxT), minSpawnTime(minT), eTime(e), startVelocity(startV), startPosition(startP) {}
 
 	virtual void Update(float dt) = 0;
 };
