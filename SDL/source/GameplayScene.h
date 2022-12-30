@@ -30,6 +30,7 @@ private:
 
 
 public:
+
     bool endPositions[5];
     static int level;
     int score;
