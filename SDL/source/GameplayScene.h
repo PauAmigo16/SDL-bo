@@ -22,10 +22,10 @@ private:
     SDL_Rect AssetsTargetRect;
     SDL_Rect AssetsSourceRect;
 
-    std::vector<GameObject> tilesLine1;
-    std::vector<GameObject> tilesLine2;
-    std::vector<GameObject> tilesLine3;
-    std::vector<GameObject> tilesLine4;
+    std::vector<GameObject*> tilesLine1;
+    std::vector<GameObject*> tilesLine2;
+    std::vector<GameObject*> tilesLine3;
+    std::vector<GameObject*> tilesLine4;
 
 
 
@@ -36,7 +36,7 @@ public:
 
     /*Spawner spawner;
     Frog player;*/
-    std::vector<GameObject> tiles;
+    std::vector<GameObject*> tiles;
     float maxTime;
     int endHazardChances;
 
