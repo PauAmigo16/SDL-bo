@@ -5,9 +5,6 @@
 #include <assert.h>
 #include <SDL.h>
 
-
-
-
 class AnimatedImageRenderer :
     public ImageRenderer
 {

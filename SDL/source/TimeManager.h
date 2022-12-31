@@ -14,12 +14,12 @@ public:
 	static const float FPS;// = 60.0f;
 	static const float TICK;// = 1.0f / 60.0f;
 
-	TimeManager* GetInstance();
+	static TimeManager* GetInstance();
 
 	void Update();
 
 	float GetCurrentTime();
-	float GetDeltaTime();
+	float GetDt();
 };
 
 const float TimeManager::FPS = 60.0f;
