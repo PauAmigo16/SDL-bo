@@ -1,6 +1,6 @@
 #pragma once
-#include "source/GameObject.h"
-#include "source/Log.h"
+#include "GameObject.h"
+#include "Log.h"
 class Food : public GameObject
 {
 private:
@@ -9,6 +9,6 @@ private:
 
 public:
 	Food(Log* log);
-	void override Update();
+	virtual void  Update()override;
 };
 

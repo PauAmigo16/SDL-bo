@@ -7,5 +7,8 @@ public:
 	RoadObject(std::string _carID, int _speed, int minSpawnRate, int maxSpawnRate);
 	std::string carID;
 	int speed,spawnRate;
+
+	virtual void Update() override;
+	virtual void Render() override;
 };
 

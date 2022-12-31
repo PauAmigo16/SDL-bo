@@ -23,7 +23,7 @@ private:
 	int windowWidth;
 	int windowHeight;
 
-	GameObject logo;
+	
 
 	void InitSDL();
 	void InitWindowAndRenderer();

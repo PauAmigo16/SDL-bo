@@ -9,5 +9,7 @@ public:
 	Log(int _minLenght, int _maxLenght, int _minSpawnRate, int _maxSpawnRate, int _crocodileChance, int _secondChance):
 		RiverObject(_minLenght, _maxLenght, _minSpawnRate, _maxSpawnRate, _crocodileChance, _secondChance){}
 	int tiles;
+	virtual void Update() override;
+	virtual void Render() override;
 };
 

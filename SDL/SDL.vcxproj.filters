@@ -87,10 +87,10 @@
     <ClCompile Include="source\RiverSpawner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Frog.cpp">
+    <ClCompile Include="source\Frog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Food.cpp">
+    <ClCompile Include="source\Food.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -170,10 +170,10 @@
     <ClInclude Include="source\RiverSpawner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Frog.h">
+    <ClInclude Include="source\Frog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Food.h">
+    <ClInclude Include="source\Food.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

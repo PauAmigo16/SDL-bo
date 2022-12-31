@@ -1,6 +1,5 @@
 #pragma once
-
-#define TM TimeManager::GetInstance() // va a hacer que cada vez que escribamos SM es como escribir la funcion
+#define TM TimeManager::GetInstance()
 
 class TimeManager
 {

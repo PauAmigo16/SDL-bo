@@ -4,7 +4,7 @@
 #include "GameObject.h"
 
 
-class Frog
+class Frog:public GameObject
 {
 private:
 	Vector2 targetPosition;
@@ -14,7 +14,8 @@ private:
 
 public:
 	Frog();
-	virtual void  Update() override;
+	virtual void Update()override;
+	virtual void Render()override;
 
 };
 
