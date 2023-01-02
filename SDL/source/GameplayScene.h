@@ -1,11 +1,11 @@
 #pragma once
 #include "Scene.h"
-//#include "Spawner.h"
 //#include "Frog.h"
+#include "RenderManager.h"
+#include "Spawner.h"
 #include "GameObject.h"
 #include <string>
 #include <vector>
-#include "RenderManager.h"
 
  const int AssetsGridFilas = 13;
  const int AssetsGridCols = 14;
@@ -27,15 +27,13 @@ private:
     std::vector<GameObject*> tilesLine3;
     std::vector<GameObject*> tilesLine4;
 
-
-
 public:
     bool endPositions[5];
     static int level;
     int score;
 
-    /*Spawner spawner;
-    Frog player;*/
+    std::vector<Spawner*> spawners;
+
     std::vector<GameObject*> tiles;
     float maxTime;
     int endHazardChances;

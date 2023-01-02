@@ -2,6 +2,7 @@
 #include <SDL.h>
 #include <string>
 #include <SDL_image.h>
+#include "TimeManager.h"
 
 class GameObject
 {

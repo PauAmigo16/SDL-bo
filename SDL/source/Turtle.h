@@ -1,10 +1,14 @@
 #pragma once
-#include "RIverObject.h"
+#include "GameObject.h"
 
 
-class Turtle: public RiverObject
+class Turtle: public GameObject
 {
+private:
+	bool Diving;
+	bool Underwater;
+
 public:
-	Turtle(int _minLenght, int _maxLenght, int _minSpawnRate, int _maxSpawnRate, int _secondChance):RiverObject(_minLenght, _maxLenght, _minSpawnRate, _maxSpawnRate, _secondChance) {}
+	Turtle(int _minLenght, int _maxLenght, int _secondChance);
 };
 

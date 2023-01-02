@@ -75,16 +75,22 @@
     <ClCompile Include="source\Log.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\RIverObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="source\RoadObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="source\Turtle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\RiverSpawner.cpp">
+    <ClCompile Include="source\LogSpawner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Snake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Crocodile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\TurtleSpawner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -152,16 +158,22 @@
     <ClInclude Include="source\Log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\RIverObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="source\RoadObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\Turtle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\RiverSpawner.h">
+    <ClInclude Include="source\LogSpawner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Snake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Crocodile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\TurtleSpawner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

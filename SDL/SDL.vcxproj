@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="source\AnimatedImageRenderer.cpp" />
     <ClCompile Include="source\AudioManager.cpp" />
+    <ClCompile Include="source\Crocodile.cpp" />
     <ClCompile Include="source\GameEngine.cpp" />
     <ClCompile Include="source\GameObject.cpp" />
     <ClCompile Include="source\GameplayScene.cpp" />
@@ -28,25 +29,27 @@
     <ClCompile Include="source\InputManager.cpp" />
     <ClCompile Include="source\LevelLoader.cpp" />
     <ClCompile Include="source\Log.cpp" />
+    <ClCompile Include="source\LogSpawner.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\MainMenuScene.cpp" />
     <ClCompile Include="source\RankingScene.cpp" />
     <ClCompile Include="source\Renderer.cpp" />
     <ClCompile Include="source\RenderManager.cpp" />
-    <ClCompile Include="source\RIverObject.cpp" />
-    <ClCompile Include="source\RiverSpawner.cpp" />
     <ClCompile Include="source\RoadObject.cpp" />
     <ClCompile Include="source\SceneManager.cpp" />
+    <ClCompile Include="source\Snake.cpp" />
     <ClCompile Include="source\SplashScreenScene.cpp" />
     <ClCompile Include="source\TextRenderer.cpp" />
     <ClCompile Include="source\TimeManager.cpp" />
     <ClCompile Include="source\Turtle.cpp" />
+    <ClCompile Include="source\TurtleSpawner.cpp" />
     <ClCompile Include="source\UIText.cpp" />
     <ClCompile Include="source\Vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="source\AnimatedImageRenderer.h" />
     <ClInclude Include="source\AudioManager.h" />
+    <ClInclude Include="source\Crocodile.h" />
     <ClInclude Include="source\GameEngine.h" />
     <ClInclude Include="source\GameObject.h" />
     <ClInclude Include="source\GameplayScene.h" />
@@ -54,20 +57,21 @@
     <ClInclude Include="source\InputManager.h" />
     <ClInclude Include="source\LevelLoader.h" />
     <ClInclude Include="source\Log.h" />
+    <ClInclude Include="source\LogSpawner.h" />
     <ClInclude Include="source\MainMenuScene.h" />
     <ClInclude Include="source\RankingScene.h" />
     <ClInclude Include="source\Renderer.h" />
     <ClInclude Include="source\RenderManager.h" />
-    <ClInclude Include="source\RIverObject.h" />
-    <ClInclude Include="source\RiverSpawner.h" />
     <ClInclude Include="source\RoadObject.h" />
     <ClInclude Include="source\Scene.h" />
     <ClInclude Include="source\SceneManager.h" />
+    <ClInclude Include="source\Snake.h" />
     <ClInclude Include="source\Spawner.h" />
     <ClInclude Include="source\SplashScreenScene.h" />
     <ClInclude Include="source\TextRenderer.h" />
     <ClInclude Include="source\TimeManager.h" />
     <ClInclude Include="source\Turtle.h" />
+    <ClInclude Include="source\TurtleSpawner.h" />
     <ClInclude Include="source\UIText.h" />
     <ClInclude Include="source\Vector2.h" />
   </ItemGroup>

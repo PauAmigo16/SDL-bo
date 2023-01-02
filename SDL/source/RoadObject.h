@@ -4,8 +4,8 @@
 class RoadObject : public GameObject
 {
 public:
-	RoadObject(std::string _carID, int _speed, int minSpawnRate, int maxSpawnRate);
+	RoadObject(std::string _carID, int _speed);
 	std::string carID;
-	int speed,spawnRate;
+	int speed;
 };
 
