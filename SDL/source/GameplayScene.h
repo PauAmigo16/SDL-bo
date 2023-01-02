@@ -28,6 +28,7 @@ private:
     std::vector<GameObject*> tilesLine4;
 
 public:
+
     bool endPositions[5];
     static int level;
     int score;
