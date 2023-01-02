@@ -4,8 +4,8 @@
 class RoadObject : public GameObject
 {
 public:
-	RoadObject(std::string _carID, int _speed);
-	std::string carID;
+	RoadObject(int _carID, int _speed);
+	int carID;
 	int speed,spawnRate;
 
 	virtual void Update() override;

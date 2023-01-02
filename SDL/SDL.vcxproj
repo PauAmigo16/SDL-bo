@@ -38,6 +38,7 @@
     <ClCompile Include="source\Renderer.cpp" />
     <ClCompile Include="source\RenderManager.cpp" />
     <ClCompile Include="source\RoadObject.cpp" />
+    <ClCompile Include="source\RoadSpawner.cpp" />
     <ClCompile Include="source\SceneManager.cpp" />
     <ClCompile Include="source\Snake.cpp" />
     <ClCompile Include="source\SplashScreenScene.cpp" />
@@ -67,6 +68,7 @@
     <ClInclude Include="source\Renderer.h" />
     <ClInclude Include="source\RenderManager.h" />
     <ClInclude Include="source\RoadObject.h" />
+    <ClInclude Include="source\RoadSpawner.h" />
     <ClInclude Include="source\Scene.h" />
     <ClInclude Include="source\SceneManager.h" />
     <ClInclude Include="source\Snake.h" />
