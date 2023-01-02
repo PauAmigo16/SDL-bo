@@ -1,6 +1,9 @@
 #pragma once
 #include "ImageRenderer.h"
 #include "TimeManager.h"
+#include "RenderManager.h"
+#include <assert.h>
+#include <SDL.h>
 
 class AnimatedImageRenderer :
     public ImageRenderer

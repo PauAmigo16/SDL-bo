@@ -1,6 +1,5 @@
 #pragma once
-
-#define TM TimeManager::GetInstance() // va a hacer que cada vez que escribamos SM es como escribir la funcion
+#define TM TimeManager::GetInstance()
 
 class TimeManager
 {
@@ -15,12 +14,12 @@ public:
 	static const float FPS;// = 60.0f;
 	static const float TICK;// = 1.0f / 60.0f;
 
-	TimeManager* GetInstance();
+	static TimeManager* GetInstance();
 
 	void Update();
 
 	float GetCurrentTime();
-	float GetDeltaTime();
+	float GetDt();
 };
 
 const float TimeManager::FPS = 60.0f;
