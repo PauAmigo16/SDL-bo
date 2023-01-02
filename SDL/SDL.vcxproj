@@ -21,12 +21,9 @@
   <ItemGroup>
     <ClCompile Include="source\AnimatedImageRenderer.cpp" />
     <ClCompile Include="source\AudioManager.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="source\Crocodile.cpp" />
-=======
     <ClCompile Include="source\Food.cpp" />
     <ClCompile Include="source\Frog.cpp" />
->>>>>>> xml
     <ClCompile Include="source\GameEngine.cpp" />
     <ClCompile Include="source\GameObject.cpp" />
     <ClCompile Include="source\GameplayScene.cpp" />
@@ -54,12 +51,9 @@
   <ItemGroup>
     <ClInclude Include="source\AnimatedImageRenderer.h" />
     <ClInclude Include="source\AudioManager.h" />
-<<<<<<< HEAD
     <ClInclude Include="source\Crocodile.h" />
-=======
     <ClInclude Include="source\Food.h" />
     <ClInclude Include="source\Frog.h" />
->>>>>>> xml
     <ClInclude Include="source\GameEngine.h" />
     <ClInclude Include="source\GameObject.h" />
     <ClInclude Include="source\GameplayScene.h" />
