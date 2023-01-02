@@ -10,5 +10,7 @@ private:
 
 public:
 	Turtle(int _minLenght, int _maxLenght, int _secondChance);
+	virtual void Update() override;
+	virtual void Render() override;
 };
 
