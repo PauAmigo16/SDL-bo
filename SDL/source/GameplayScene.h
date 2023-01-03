@@ -27,6 +27,8 @@ private:
     std::vector<GameObject*> tilesLine3;
     std::vector<GameObject*> tilesLine4;
 
+    std::vector<GameObject*> gObjects;//Com no entenc els diferents vectors ja mho explicaras de moment amb un fem.
+
 public:
 
     bool endPositions[5];
@@ -38,6 +40,8 @@ public:
     std::vector<GameObject*> tiles;
     float maxTime;
     int endHazardChances;
+
+    void AddGameObject(GameObject* gO);
 
     GameplayScene() = default;
     void OnEnter() override;

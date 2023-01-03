@@ -3,7 +3,7 @@
 std::random_device rd;
 std::mt19937 gen(rd());
 
-void LogSpawner::Spawn()
+void LogSpawner::Spawn(GameplayScene* Game)
 {
 	std::uniform_int_distribution<> dist(minLength, maxLength);
 	float length = dist(gen);
@@ -12,11 +12,14 @@ void LogSpawner::Spawn()
 
 	if (randomNum < crocChance) 
 	{
-		//Spawn crocodile
+		Game->AddGameObject(new Crocodile(length, 0));//ns que es el second chance
 	}
 	else if(randomNum>crocChance&&randomNum<(crocChance+snakeChance))
 	{
-		//Spawn snake
+		GameObject* log = new Log(length, 0);
+		Game->AddGameObject(log);//ns k es secondchance
+		GameObject* snake = new Snake(log);
+		Game->AddGameObject(snake);
 	}
 	else
 	{

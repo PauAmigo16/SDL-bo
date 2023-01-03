@@ -17,6 +17,11 @@ void GameplayScene::PrintMap(SDL_Renderer* renderer, int width, int height)
 	
 }
 
+void GameplayScene::AddGameObject(GameObject* gO)
+{
+	gObjects.push_back(gO);
+}
+
 void GameplayScene::OnEnter()
 {
 }

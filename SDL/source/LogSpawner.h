@@ -13,7 +13,7 @@ private:
 	float minLength;
 	float maxLength;
 
-	void Spawn() override;
+	void Spawn(GameplayScene* Game) override;
 
 public:
 	LogSpawner(float maxT, float minT, float startV, Vector2 startP, GameplayScene* scene, float crocChance, float snakeChance, float minL, float maxL)

@@ -4,5 +4,9 @@
 class Crocodile :
     public Log
 {
+private:
+
+public:
+    Crocodile (int length, int _secondChance) : Log(length, _secondChance){}
 };
 
