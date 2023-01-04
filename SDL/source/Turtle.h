@@ -1,15 +1,17 @@
 #pragma once
 #include "GameObject.h"
 
-
 class Turtle: public GameObject
 {
 private:
-	bool Diving;
-	bool Underwater;
+	bool diving;
+	bool underwater;
+
+	int length;
 
 public:
-	Turtle(int _minLenght, int _maxLenght, int _secondChance);
+	Turtle(int length, int _secondChance, bool diving)
+		: length(length), diving(diving){}
 	virtual void Update() override;
 	virtual void Render() override;
 };

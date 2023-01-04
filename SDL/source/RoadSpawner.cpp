@@ -7,19 +7,19 @@ GameObject* RoadSpawner::Spawn()
 	switch (carId)
 	{
 	case 0:
-		//Spawn truck
+		gO = new RoadObject(carId, startVelocity);
 		break;
 	case 1:
-		//Spawn racing 1
+		gO = new RoadObject(carId, startVelocity);
 		break;
 	case 2:
-		//Spawn racing 2
+		gO = new RoadObject(carId, startVelocity);
 		break;
 	case 3:
-		//Spawn farming
+		gO = new RoadObject(carId, startVelocity);
 		break; 
 	case 4:
-		//Spawn family
+		gO = new RoadObject(carId, startVelocity);
 		break;
 	}
 
