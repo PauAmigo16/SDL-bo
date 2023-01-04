@@ -10,3 +10,8 @@ TimeManager* TimeManager::GetInstance()
 
     return instance;
 }
+
+float TimeManager::GetDt()
+{
+    return dt;
+}

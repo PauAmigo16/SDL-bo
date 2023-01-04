@@ -1,5 +1,9 @@
 #pragma once
+
 #define TM TimeManager::GetInstance()
+
+const float TimeManager::FPS = 60.0f;
+const float TimeManager::TICK = 1.0f / 60.0f;
 
 class TimeManager
 {
@@ -22,5 +26,3 @@ public:
 	float GetDt();
 };
 
-const float TimeManager::FPS = 60.0f;
-const float TimeManager::TICK = 1.0f / 60.0f;
