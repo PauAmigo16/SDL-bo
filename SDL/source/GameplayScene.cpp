@@ -18,6 +18,11 @@ void GameplayScene::PrintMap(SDL_Renderer* renderer, int width, int height)
 
 }
 
+void GameplayScene::LoadLevelFromFile(std::string path)
+{
+	LL->LoadLevel(path, this);
+}
+
 void GameplayScene::AddGameObject(GameObject* gO)
 {
 	gObjects.push_back(gO);
@@ -25,21 +30,29 @@ void GameplayScene::AddGameObject(GameObject* gO)
 
 void GameplayScene::OnEnter()
 {
+	for (auto gO : gObjects)
+		gO->Render();
 }
 
 void GameplayScene::OnExit()
 {
-	
+	for (auto spawner : spawners)
+		delete spawner;
+	for (auto gO : gObjects)
+		delete gO;
 }
 
 void GameplayScene::Update()
 {
 	for (auto spawner : spawners)
 		spawner->Update();
+	for (auto gO : gObjects)
+		gO->Update();
 }
 
 void GameplayScene::Render(SDL_Renderer* renderer, int width, int height)
 {
 	PrintMap(renderer, width, height);
-
+	/*for (auto gO : gObjects)
+		gO->Render();*/
 }

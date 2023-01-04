@@ -7,13 +7,12 @@
 #define LL LevelLoader::GetInstance() 
 
 class LevelLoader {
-public:
-	static LevelLoader* GetInstance();
-	void LoadLevel(std::string path, GameplayScene* myGameplay);
-	void SaveLevel(std::string path, GameplayScene* myGameplay);
-
 private:
 	static LevelLoader* instance;
 	LevelLoader() = default;
 
+public:
+	static LevelLoader* GetInstance();
+	void LoadLevel(std::string path, GameplayScene* myGameplay);
+	void SaveLevel(std::string path, GameplayScene* myGameplay);
 };

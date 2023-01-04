@@ -4,6 +4,7 @@
 #include "RenderManager.h"
 #include "Spawner.h"
 #include "GameObject.h"
+#include "LevelLoader.h"
 #include <string>
 #include <vector>
 

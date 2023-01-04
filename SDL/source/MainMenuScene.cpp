@@ -84,4 +84,5 @@ void MainMenuScene::OnEnter()
 
 void MainMenuScene::OnExit()
 {
+	delete font;
 }
