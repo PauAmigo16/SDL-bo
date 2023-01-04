@@ -1,18 +1,17 @@
 #pragma once
+#include <SDL.h>
 
 #define TM TimeManager::GetInstance()
-
-const float TimeManager::FPS = 60.0f;
-const float TimeManager::TICK = 1.0f / 60.0f;
 
 class TimeManager
 {
 private:
-	float dt;
+	float dt;//ms
+	float eTime;
 
 	static TimeManager* instance;
 	
-	TimeManager() = default;
+	TimeManager();
 
 public:
 	static const float FPS;// = 60.0f;

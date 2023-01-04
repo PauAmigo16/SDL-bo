@@ -23,5 +23,7 @@ GameObject* RoadSpawner::Spawn()
 		break;
 	}
 
+	eTime = 0.0f;
+
 	return gO;
 }

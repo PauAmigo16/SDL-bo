@@ -18,7 +18,7 @@ private:
 
 public:
     //Inherit via Scene
-    virtual void Update(float dt) override;
+    virtual void Update() override;
     virtual void Render(SDL_Renderer* renderer, int width, int height) override;
     virtual void OnEnter() override;
     virtual void OnExit() override;

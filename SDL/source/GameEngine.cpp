@@ -59,7 +59,7 @@ void GameEngine::Run()
 	{
 		IM->Listen();
 		isRunning = !IM->GetQuitEvent();
-		SM->GetCurrentScene()->Update(0.0f);
+		SM->GetCurrentScene()->Update();
 
 		//RENDER
 		//Set the clear color for renderer

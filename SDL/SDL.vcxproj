@@ -41,6 +41,7 @@
     <ClCompile Include="source\RoadSpawner.cpp" />
     <ClCompile Include="source\SceneManager.cpp" />
     <ClCompile Include="source\Snake.cpp" />
+    <ClCompile Include="source\Spawner.cpp" />
     <ClCompile Include="source\SplashScreenScene.cpp" />
     <ClCompile Include="source\TextRenderer.cpp" />
     <ClCompile Include="source\TimeManager.cpp" />

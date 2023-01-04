@@ -1,6 +1,7 @@
 #pragma once
 #include "Spawner.h"
 #include "RoadObject.h"
+#include "TimeManager.h"
 
 class RoadSpawner :
     public Spawner
@@ -13,7 +14,5 @@ private:
 public:
     RoadSpawner(int carId, float maxT, float minT, float startV, Vector2 startP)
         : Spawner(maxT, minT, startV, startP), carId(carId) {}
-
-    GameObject* Update(float dt) override;
 };
 

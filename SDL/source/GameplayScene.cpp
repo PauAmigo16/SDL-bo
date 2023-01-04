@@ -14,7 +14,8 @@ void GameplayScene::PrintMap(SDL_Renderer* renderer, int width, int height)
 				SDL_RenderCopy(renderer, AssetsTexture, &AssetsSourceRect, &AssetsTargetRect);
 		}
 	}
-	
+	SDL_FreeSurface(surface);
+
 }
 
 void GameplayScene::AddGameObject(GameObject* gO)
@@ -31,8 +32,10 @@ void GameplayScene::OnExit()
 	
 }
 
-void GameplayScene::Update(float dt)
+void GameplayScene::Update()
 {
+	for (auto spawner : spawners)
+		spawner->Update();
 }
 
 void GameplayScene::Render(SDL_Renderer* renderer, int width, int height)

@@ -15,7 +15,5 @@ private:
 public:
     TurtleSpawner(float minL, float maxL, float minT, float maxT, float diveChance, float startV, Vector2 startP)
         : Spawner(maxT, minT, startV, startP), diveChance(diveChance), maxLength(maxL), minLength(minL){}
-
-    GameObject* Update(float dt) override;
 };
 

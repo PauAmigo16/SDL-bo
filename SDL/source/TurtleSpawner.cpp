@@ -1,13 +1,9 @@
 #include "TurtleSpawner.h"
 
-std::random_device rd;
-std::mt19937 gen(rd());
-
 GameObject* TurtleSpawner::Spawn()
 {
 	GameObject* gO=nullptr;
-	std::uniform_int_distribution<> dist(minLength, maxLength);
-	float length = dist(gen);
+	float length = (rand() % (int)maxSpawnTime) - minSpawnTime;
 
 	int randomNum = rand() % 100;
 

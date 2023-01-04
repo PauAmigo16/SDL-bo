@@ -1,6 +1,6 @@
 #include "MainMenuScene.h"
 
-void MainMenuScene::Update(float dt)
+void MainMenuScene::Update()
 {
 	//Check if the mouse is inside the render rect
 	int width = 28 * sampleText.text.length();

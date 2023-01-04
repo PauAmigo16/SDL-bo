@@ -18,8 +18,11 @@ protected:
 
 public:
 	Spawner(float maxT, float minT, float startV, Vector2 startP)
-		: maxSpawnTime(maxT), minSpawnTime(minT), startVelocity(startV), startPosition(startP) {}
+		: maxSpawnTime(maxT), minSpawnTime(minT), startVelocity(startV), startPosition(startP)
+	{
+		eTime = 0.0f;
+	}
 
-	virtual GameObject* Update(float dt) = 0;
+	virtual GameObject* Update();
 };
 

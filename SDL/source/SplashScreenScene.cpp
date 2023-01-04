@@ -1,6 +1,6 @@
 #include "SplashScreenScene.h"
 
-void SplashScreenScene::Update(float dt)
+void SplashScreenScene::Update()
 {
 	if (IM->CheckKeyState(SDLK_SPACE, PRESSED))
 		SM->SetScene("Main Menu");

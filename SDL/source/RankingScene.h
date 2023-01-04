@@ -11,7 +11,7 @@ public:
 
     void OnEnter() override;
     void OnExit() override;
-    void Update(float dt) override;
+    void Update() override;
     void Render(SDL_Renderer*, int width, int height) override;
 };
 
