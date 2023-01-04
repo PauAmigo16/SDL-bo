@@ -8,7 +8,7 @@ class Snake :
 private:
     Log* log;
 public:
-    Snake(Log* log);
+    Snake(Log* log):GameObject(){}
 
     void Update() override;
     void Render() override;

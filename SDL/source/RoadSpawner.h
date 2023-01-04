@@ -8,12 +8,12 @@ class RoadSpawner :
 private:
     int carId;
 
-    void Spawn() override;
+    GameObject* Spawn() override;
 
 public:
-    RoadSpawner(float maxT, float minT, float startV, Vector2 startP, GameplayScene* scene, int carId)
-        : Spawner(maxT, minT, startV, startP, scene), carId(carId) {}
+    RoadSpawner(int carId, float maxT, float minT, float startV, Vector2 startP)
+        : Spawner(maxT, minT, startV, startP), carId(carId) {}
 
-    void Update(float dt) override;
+    GameObject* Update(float dt) override;
 };
 

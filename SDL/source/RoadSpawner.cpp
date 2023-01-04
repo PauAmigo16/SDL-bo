@@ -1,7 +1,9 @@
 #include "RoadSpawner.h"
 
-void RoadSpawner::Spawn()
+GameObject* RoadSpawner::Spawn()
 {
+	GameObject* gO=nullptr;
+
 	switch (carId)
 	{
 	case 0:
@@ -20,4 +22,6 @@ void RoadSpawner::Spawn()
 		//Spawn family
 		break;
 	}
+
+	return gO;
 }

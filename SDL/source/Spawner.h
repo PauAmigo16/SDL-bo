@@ -1,6 +1,6 @@
 #pragma once
 #include "Vector2.h"
-#include "GameplayScene.h"
+#include "GameObject.h"
 #include "TimeManager.h"
 #include <random>
 
@@ -14,14 +14,12 @@ protected:
 
 	Vector2 startPosition;
 
-	GameplayScene* scene;
-
-	virtual void Spawn() = 0;
+	virtual GameObject* Spawn() = 0;
 
 public:
-	Spawner(float maxT, float minT, float startV, Vector2 startP, GameplayScene* scene)
-		: maxSpawnTime(maxT), minSpawnTime(minT), startVelocity(startV), startPosition(startP), scene(scene) {}
+	Spawner(float maxT, float minT, float startV, Vector2 startP)
+		: maxSpawnTime(maxT), minSpawnTime(minT), startVelocity(startV), startPosition(startP) {}
 
-	virtual void Update(float dt) = 0;
+	virtual GameObject* Update(float dt) = 0;
 };
 

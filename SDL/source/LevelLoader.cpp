@@ -3,9 +3,9 @@
 #include "../dependencies/inc/XML/rapidxml_iterators.hpp"
 #include "../dependencies/inc/XML/rapidxml_print.hpp"
 #include "../dependencies/inc/XML/rapidxml_utils.hpp"
-#include "Log.h"
-#include "Turtle.h"
-#include "RoadObject.h"
+#include "LogSpawner.h"
+#include "RoadSpawner.h"
+#include "TurtleSpawner.h"
 
 
 LevelLoader* LevelLoader::instance = nullptr;
@@ -37,9 +37,7 @@ void LevelLoader::LoadLevel(std::string path, GameplayScene* myGameplay)
 	pRoot = pRoot->first_node("Layout");
 
 	myGameplay->endHazardChances = stof((std::string)pRoot->first_node()->first_attribute()->value());
-	int spawnPosition = 0;
-
-	std::vector<GameObject*>(linesObject);
+	Vector2 spawnPosition(0,2);
 
 
 	/*Tile* tile[14 * 15];
@@ -91,74 +89,41 @@ void LevelLoader::LoadLevel(std::string path, GameplayScene* myGameplay)
 		{
 			/*for (float col = 0; col < 14; col++)
 			{*/
-				/*tile[(int)((rows * 14) + col)]->SetTransform(col * RM->gridX, rows * RM->gridY, RM->gridX, RM->gridY, 0);
-				tile[(int)((rows * 14) + col)]->IsLethal(true);
-				tile[(int)((rows * 14) + col)]->SetImage({ 9 , 25, 24 , 16 });
-				gamelay->tiles.push_back(tile[(int)((rows * 14) + col)]);*/
-				if (/*col == 0 && */(std::string)pNode->name() == "LogRiver")
-				{
-					rapidxml::xml_node<>* pNode2 = pNode->first_node();
-					linesObject.push_back(new Log(stoi((std::string)pNode2->first_attribute()->next_attribute()->value()), stoi((std::string)pNode2->first_attribute()->value()),
-						stoi((std::string)pNode->first_attribute()->next_attribute()->value()), stoi((std::string)pNode->first_attribute()->value()), stoi((std::string)pNode2->next_sibling()->value()),
-						stoi((std::string)pNode2->next_sibling()->next_sibling()->value())));
-					/*Spawner* spawn = new Spawner
-					("log",
-						stoi((std::string)pNode2->first_attribute()->next_attribute()->value()),
-						stoi((std::string)pNode2->first_attribute()->value()),
-						tile[(int)((rows * 14) + col)]->GetTransform().GetPosition().x,
-						tile[(int)((rows * 14) + col)]->GetTransform().GetPosition().y,
-						2 * (RM->gridX),
-						0,
-						stoi((std::string)pNode->first_attribute()->next_attribute()->value()),
-						stoi((std::string)pNode->first_attribute()->value()),
-						spawnPosition % 2,
-						stoi((std::string)pNode2->next_sibling()->value()),
-						stoi((std::string)pNode2->next_sibling()->next_sibling()->value())
-						);
-
-					gamelay->spawners.push_back(spawn);
-					spawnPosition++;*/
-				}
-				else if (/*col == 0 && */(std::string)pNode->name() == "TurtlesRiver")
-				{
-					rapidxml::xml_node<>* pNode2 = pNode->first_node();
-					linesObject.push_back(new Turtle(stoi((std::string)pNode2->first_attribute()->next_attribute()->value()), stoi((std::string)pNode2->first_attribute()->value()),
-						stoi((std::string)pNode->first_attribute()->next_attribute()->value()), stoi((std::string)pNode->first_attribute()->value()), stoi((std::string)pNode2->next_sibling()->value())));
-
-					/*Spawner* spawn = new Spawner
-					("turtle",
-						stoi((std::string)pNode2->first_attribute()->next_attribute()->value()),
-						stoi((std::string)pNode2->first_attribute()->value()),
-						tile[(int)((rows * 14) + col)]->GetTransform().GetPosition().x,
-						tile[(int)((rows * 14) + col)]->GetTransform().GetPosition().y,
-						2 * (RM->gridX),
-						0,
-						stoi((std::string)pNode->first_attribute()->next_attribute()->value()),
-						stoi((std::string)pNode->first_attribute()->value()),
-						spawnPosition % 2,
-						stoi((std::string)pNode2->next_sibling()->value())
-						);
-
-					gamelay->spawners.push_back(spawn);
-					spawnPosition++;*/
-				}
-			/*}*/
-		}
-		else if ((std::string)pNode->name() == "SafeZone")
-		{
-			/*for (float col = 0; col < 14; col++)
+			/*tile[(int)((rows * 14) + col)]->SetTransform(col * RM->gridX, rows * RM->gridY, RM->gridX, RM->gridY, 0);
+			tile[(int)((rows * 14) + col)]->IsLethal(true);
+			tile[(int)((rows * 14) + col)]->SetImage({ 9 , 25, 24 , 16 });
+			gamelay->tiles.push_back(tile[(int)((rows * 14) + col)]);*/
+			if (/*col == 0 && */(std::string)pNode->name() == "LogRiver")
 			{
+				rapidxml::xml_node<>* pNode2 = pNode->first_node();
+				myGameplay->spawners.push_back(new LogSpawner(stof((std::string)pNode2->first_attribute()->next_attribute()->value()), stof((std::string)pNode2->first_attribute()->value()),
+					stof((std::string)pNode->first_attribute()->next_attribute()->value()), stof((std::string)pNode->first_attribute()->value()), stof((std::string)pNode2->next_sibling()->value()),
+					stof((std::string)pNode2->next_sibling()->next_sibling()->value()), 1.0f, spawnPosition));
+				spawnPosition.y++;
+			}
+			else if (/*col == 0 && */(std::string)pNode->name() == "TurtlesRiver")
+			{
+				rapidxml::xml_node<>* pNode2 = pNode->first_node();
+				myGameplay->spawners.push_back(new TurtleSpawner(stof((std::string)pNode2->first_attribute()->next_attribute()->value()), stof((std::string)pNode2->first_attribute()->value()),
+					stof((std::string)pNode->first_attribute()->next_attribute()->value()), stof((std::string)pNode->first_attribute()->value()), stof((std::string)pNode2->next_sibling()->value()), 1.0f, spawnPosition));
+				spawnPosition.y++;
 
-				tile[(int)((rows * 14) + col)]->SetTransform(col * RM->gridX, rows * RM->gridY, RM->gridX, RM->gridY, 0);
-				tile[(int)((rows * 14) + col)]->IsLethal(false);
-				tile[(int)((rows * 14) + col)]->SetImage({ 9 , 105, 24 , 16 });
-				gamelay->tiles.push_back(tile[(int)((rows * 14) + col)]);
-			}*/
-		}
-		else if ((std::string)pNode->name() == "Road")
-		{
-			/*for (float col = 0; col < 14; col++)
-			{*/
+			}
+			else if ((std::string)pNode->name() == "SafeZone")
+			{
+				/*for (float col = 0; col < 14; col++)
+				{
+
+					tile[(int)((rows * 14) + col)]->SetTransform(col * RM->gridX, rows * RM->gridY, RM->gridX, RM->gridY, 0);
+					tile[(int)((rows * 14) + col)]->IsLethal(false);
+					tile[(int)((rows * 14) + col)]->SetImage({ 9 , 105, 24 , 16 });
+					gamelay->tiles.push_back(tile[(int)((rows * 14) + col)]);
+				}*/
+			}
+			else if ((std::string)pNode->name() == "Road")
+			{
+				/*for (float col = 0; col < 14; col++)
+				{*/
 
 				/*tile[(int)((rows * 14) + col)]->SetTransform(col * RM->gridX, rows * RM->gridY, RM->gridX, RM->gridY, 0);
 				tile[(int)((rows * 14) + col)]->IsLethal(false);
@@ -166,36 +131,24 @@ void LevelLoader::LoadLevel(std::string path, GameplayScene* myGameplay)
 				gamelay->tiles.push_back(tile[(int)((rows * 14) + col)]);*/
 				/*if (col == 0)
 				{*/
-					rapidxml::xml_node<>* pNode2 = pNode->first_node();
-					linesObject.push_back(new RoadObject((std::string)pNode->first_attribute()->value(), 
-						stoi((std::string)pNode2->first_attribute()->next_attribute()->value()),stoi((std::string)pNode2->first_attribute()->value()),
-						stoi((std::string)pNode2->next_sibling()->value())));
-					//Spawner* spawn = new Spawner
-					//((std::string)pNode->first_attribute()->value(),
-					//	stoi((std::string)pNode2->first_attribute()->next_attribute()->value()),
-					//	stoi((std::string)pNode2->first_attribute()->value()),
-					//	tile[(int)((rows * 14) + col)]->GetTransform().GetPosition().x,
-					//	tile[(int)((rows * 14) + col)]->GetTransform().GetPosition().y,
-					//	stoi((std::string)pNode2->next_sibling()->value()) * RM->gridX,
-					//	0,
-					//	spawnPosition % 2);
+				rapidxml::xml_node<>* pNode2 = pNode->first_node();
+				myGameplay->spawners.push_back(new RoadSpawner(stoi((std::string)pNode->first_attribute()->value()),
+					stof((std::string)pNode2->first_attribute()->next_attribute()->value()), stof((std::string)pNode2->first_attribute()->value()),
+					stof((std::string)pNode2->next_sibling()->value()), spawnPosition));
 
-					//gamelay->spawners.push_back(spawn);
-					//spawnPosition++;
-				/*}*/
-			/*}*/
+				spawnPosition.y++;
+			}
+			/*rows++;*/
 		}
-		/*rows++;*/
+
+		/*for (float col = 0; col < 14; col++)
+		{
+
+			tile[(int)((rows * 14) + col)]->SetTransform(col * RM->gridX, rows * RM->gridY, RM->gridX, RM->gridY, 0);
+			tile[(int)((rows * 14) + col)]->IsLethal(false);
+			tile[(int)((rows * 14) + col)]->SetImage({ 9 , 121, 24 , 16 });
+			gamelay->tiles.push_back(tile[(int)((rows * 14) + col)]);
+		}*/
+
 	}
-
-	/*for (float col = 0; col < 14; col++)
-	{
-
-		tile[(int)((rows * 14) + col)]->SetTransform(col * RM->gridX, rows * RM->gridY, RM->gridX, RM->gridY, 0);
-		tile[(int)((rows * 14) + col)]->IsLethal(false);
-		tile[(int)((rows * 14) + col)]->SetImage({ 9 , 121, 24 , 16 });
-		gamelay->tiles.push_back(tile[(int)((rows * 14) + col)]);
-	}*/
-
-
 }

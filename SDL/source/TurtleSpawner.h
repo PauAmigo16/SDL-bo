@@ -8,12 +8,12 @@ private:
     float minLength;
     float maxLength;
 
-    void Spawn() override;
+    GameObject* Spawn() override;
 
 public:
-    TurtleSpawner(float maxT, float minT, float startV, Vector2 startP, GameplayScene* scene, float diveChance, float minL, float maxL)
-        : Spawner(maxT, minT, startV, startP, scene), diveChance(diveChance), maxLength(maxL), minLength(minL){}
+    TurtleSpawner(float minL, float maxL, float minT, float maxT, float diveChance, float startV, Vector2 startP)
+        : Spawner(maxT, minT, startV, startP), diveChance(diveChance), maxLength(maxL), minLength(minL){}
 
-    void Update(float dt) override;
+    GameObject* Update(float dt) override;
 };
 

@@ -13,12 +13,12 @@ private:
 	float minLength;
 	float maxLength;
 
-	void Spawn(GameplayScene* Game) override;
+	GameObject* Spawn() override;
 
 public:
-	LogSpawner(float maxT, float minT, float startV, Vector2 startP, GameplayScene* scene, float crocChance, float snakeChance, float minL, float maxL)
-		: Spawner(maxT, minT, startV, startP, scene), crocChance(crocChance), snakeChance(snakeChance), minLength(minL), maxLength(maxL) {}
+	LogSpawner(float minL, float maxL, float minT, float maxT, float crocChance, float snakeChance, float startV, Vector2 startP)
+		: Spawner(maxT, minT, startV, startP), crocChance(crocChance), snakeChance(snakeChance), minLength(minL), maxLength(maxL) {}
 
-	void Update(float dt) override;
+	GameObject* Update(float dt) override;
 };
 
