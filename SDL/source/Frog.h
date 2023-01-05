@@ -1,21 +1,31 @@
 #pragma once
-#include "Vector2.h"
-#include "Food.h"
 #include "GameObject.h"
+#include "Food.h"
 
-
-class Frog:public GameObject
+class Frog :
+    public GameObject
 {
 private:
-	Vector2 targetPosition;
-	bool moving = false;
-	bool hasFood=false;
-	Food* food;
+    Vector2 position;
+    Vector2 targetPos;
+
+    bool moving;
+    bool hasFood;
+
+    Food* food;
+
+    std::string path;
 
 public:
-	Frog();
-	virtual void Update()override;
-	virtual void Render()override;
+    Frog();
 
+    void Respawn();
+    void AddMovement(Vector2 dir);
+    void Load();
+    void Update() override;
+    void Render() override;
+    void AddFood(Food* food);
+
+    bool isMoving();
 };
 

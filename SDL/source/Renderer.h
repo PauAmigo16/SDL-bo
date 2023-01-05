@@ -17,7 +17,8 @@ protected:
 	float rotation;
 
 public:
-	Renderer(SDL_Color color, float alpha, float rotation, SDL_Rect sourceRect, SDL_Rect targetRect) : color(color), alpha(alpha), rotation(rotation), sourceRect(sourceRect), targetRect(targetRect) 
+	Renderer(SDL_Color color, float alpha, float rotation, SDL_Rect sourceRect, SDL_Rect targetRect) : 
+		color(color), alpha(alpha), rotation(rotation), sourceRect(sourceRect), targetRect(targetRect) 
 	{
 
 	}

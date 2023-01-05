@@ -7,9 +7,13 @@ class Snake :
 {
 private:
     Log* log;
-public:
-    Snake(Log* log):GameObject(){}
 
+    std::string path;
+
+public:
+    Snake(Log* log);
+
+    void Load() override;
     void Update() override;
     void Render() override;
 };

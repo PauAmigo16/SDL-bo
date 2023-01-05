@@ -1,9 +1,13 @@
 #include "Snake.h"
 
-void Snake::Update()
+Snake::Snake(Log* log) :log(log)
 {
+	path = "../resources/SnakeAnimation.png";
+
+	renderers.push_back(AnimatedImageRenderer());
 }
 
-void Snake::Render()
+void Snake::Load()
 {
+	renderers[0].Load(path);
 }
