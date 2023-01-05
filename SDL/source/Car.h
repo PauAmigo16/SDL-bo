@@ -1,5 +1,6 @@
 #pragma once
 #include "GameObject.h"
+#include "ImageRenderer.h"
 
 enum class CarType { TRUCK, CAR1, CAR2, CAR3, CAR4 };
 

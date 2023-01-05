@@ -21,7 +21,9 @@
   <ItemGroup>
     <ClCompile Include="source\AnimatedImageRenderer.cpp" />
     <ClCompile Include="source\AudioManager.cpp" />
+    <ClCompile Include="source\Car.cpp" />
     <ClCompile Include="source\Crocodile.cpp" />
+    <ClCompile Include="source\EndTileItem.cpp" />
     <ClCompile Include="source\Food.cpp" />
     <ClCompile Include="source\Frog.cpp" />
     <ClCompile Include="source\GameEngine.cpp" />
@@ -45,7 +47,7 @@
     <ClCompile Include="source\SplashScreenScene.cpp" />
     <ClCompile Include="source\TextRenderer.cpp" />
     <ClCompile Include="source\TimeManager.cpp" />
-    <ClCompile Include="source\Turtle.cpp" />
+    <ClCompile Include="source\Turtles.cpp" />
     <ClCompile Include="source\TurtleSpawner.cpp" />
     <ClCompile Include="source\UIText.cpp" />
     <ClCompile Include="source\Vector2.cpp" />
@@ -53,7 +55,10 @@
   <ItemGroup>
     <ClInclude Include="source\AnimatedImageRenderer.h" />
     <ClInclude Include="source\AudioManager.h" />
+    <ClInclude Include="source\Car.h" />
     <ClInclude Include="source\Crocodile.h" />
+    <ClInclude Include="source\DivingTurtles.h" />
+    <ClInclude Include="source\EndTileItem.h" />
     <ClInclude Include="source\Food.h" />
     <ClInclude Include="source\Frog.h" />
     <ClInclude Include="source\GameEngine.h" />
@@ -78,6 +83,7 @@
     <ClInclude Include="source\TextRenderer.h" />
     <ClInclude Include="source\TimeManager.h" />
     <ClInclude Include="source\Turtle.h" />
+    <ClInclude Include="source\Turtles.h" />
     <ClInclude Include="source\TurtleSpawner.h" />
     <ClInclude Include="source\UIText.h" />
     <ClInclude Include="source\Vector2.h" />
@@ -103,7 +109,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">

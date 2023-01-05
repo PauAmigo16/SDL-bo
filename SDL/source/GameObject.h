@@ -6,6 +6,7 @@
 #include "TimeManager.h"
 #include <vector>
 #include "AnimatedImageRenderer.h"
+#include "ImageRenderer.h"
 
 class GameObject
 {
