@@ -4,7 +4,6 @@
 #include "RenderManager.h"
 #include "Spawner.h"
 #include "GameObject.h"
-#include "LevelLoader.h"
 #include <string>
 #include <vector>
 
@@ -16,8 +15,7 @@ class GameplayScene :
 {
 private:
     void SaveScore();
-    void PrintMap(SDL_Renderer* renderer, int width, int height);
-    void LoadLevelFromFile(std::string path);    
+    void PrintMap(SDL_Renderer* renderer, int width, int height); 
     
     SDL_Texture* AssetsTexture;
     SDL_Rect AssetsTargetRect;

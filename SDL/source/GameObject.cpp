@@ -1,4 +1,5 @@
 #include "GameObject.h"
+#include "GameObject.h"
 
 void GameObject::LoadTexture(SDL_Renderer* renderer, std::string path)
 {
@@ -22,3 +23,4 @@ void GameObject::SetPosition(int x, int y)
 	destinationRect.x = x;
 	destinationRect.y = y;
 }
+

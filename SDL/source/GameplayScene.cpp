@@ -18,11 +18,6 @@ void GameplayScene::PrintMap(SDL_Renderer* renderer, int width, int height)
 
 }
 
-void GameplayScene::LoadLevelFromFile(std::string path)
-{
-	LL->LoadLevel(path, this);
-}
-
 void GameplayScene::AddGameObject(GameObject* gO)
 {
 	gObjects.push_back(gO);
@@ -32,6 +27,7 @@ void GameplayScene::OnEnter()
 {
 	for (auto gO : gObjects)
 		gO->Render();
+
 }
 
 void GameplayScene::OnExit()

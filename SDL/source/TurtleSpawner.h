@@ -1,6 +1,7 @@
 #pragma once
 #include "Spawner.h"
 #include "Turtle.h"
+#include "DivingTurtles.h"
 
 class TurtleSpawner :
     public Spawner

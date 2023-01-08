@@ -105,13 +105,13 @@
     <ClCompile Include="source\Spawner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Car.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="source\EndTileItem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Turtles.cpp">
+    <ClCompile Include="source\Turtle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DivingTurtles.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -206,16 +206,10 @@
     <ClInclude Include="source\RoadSpawner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\Car.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="source\DivingTurtles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\EndTileItem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Turtles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

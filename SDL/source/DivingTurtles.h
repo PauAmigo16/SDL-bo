@@ -1,8 +1,8 @@
 #pragma once
-#include "Turtles.h"
+#include "Turtle.h"
 
 class DivingTurtles :
-    public Turtles
+    public Turtle
 {
 private:
     float diveDuration;
@@ -14,7 +14,7 @@ private:
     std::string path;
 
 public:
-    DivingTurtles(float diveDuration, float surfaceDuration, int length) :Turtles(length), diveDuration(diveDuration), surfaceDuration(surfaceDuration)
+    DivingTurtles(float diveDuration, float surfaceDuration, int length) :Turtle(length), diveDuration(diveDuration), surfaceDuration(surfaceDuration)
     {
         path = "../resources/DivingTurtleAnimation.png";
     }

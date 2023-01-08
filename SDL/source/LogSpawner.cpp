@@ -7,18 +7,18 @@ GameObject* LogSpawner::Spawn()
 
 	int randomNum = rand() % 100;
 
-	if (randomNum < crocChance) 
+	if (randomNum < crocChance)
 	{
-		gO=new Crocodile(length, 0);//ns que es el second chance
+		gO = new Crocodile(1.0f, 3.0f, length);//ns que es el second chance
 	}
-	else if(randomNum>crocChance&&randomNum<(crocChance+snakeChance))
+	else if (randomNum > crocChance && randomNum < (crocChance + snakeChance))
 	{
-		auto log = new Log(length, 0);
-		gO=new Snake(log);
+		auto log = new Log(length);
+		gO = new Snake(log);
 	}
 	else
 	{
-		gO=new Log(length, 0);//ns k es secondchance
+		gO = new Log(length);//ns k es secondchance
 	}
 	return gO;
 }

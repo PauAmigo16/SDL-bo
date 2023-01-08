@@ -2,9 +2,9 @@
 #include <SDL.h>
 #include <string>
 #include <SDL_image.h>
+#include <vector>
 #include "Renderer.h"
 #include "TimeManager.h"
-#include <vector>
 #include "AnimatedImageRenderer.h"
 #include "ImageRenderer.h"
 
@@ -12,7 +12,7 @@ class GameObject
 {
 
 protected:
-	std::vector<Renderer> renderers;
+	std::vector<Renderer*> renderers;
 
 public:
 	SDL_Texture* texture;

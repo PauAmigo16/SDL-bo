@@ -91,11 +91,14 @@ void GameEngine::Quit()
 }
 
 void GameEngine::FillScenes() {
+	auto gameplay = new GameplayScene();
 	SM->ClearScenes();
 	SM->AddScene("Splash Screen", new SplashScreenScene());
 	SM->AddScene("Main Menu", new MainMenuScene());
 	//SM->AddScene("Main Menu", new MainMenuScene());
-	SM->AddScene("Gameplay Scene", new GameplayScene());
+	SM->AddScene("Gameplay Scene", gameplay);
+
+	LL->LoadLevel(". / resources/sample_level.xml", gameplay);
 
 	SM->SetScene("Gameplay Scene");
 }

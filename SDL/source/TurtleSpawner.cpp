@@ -9,10 +9,10 @@ GameObject* TurtleSpawner::Spawn()
 
 	if (randomNum < diveChance) 
 	{
-		gO = new Turtle(length, 0, true);
+		gO = new DivingTurtles(1.0f, 3.0f, length);
 	}
 	else {
-		gO = new Turtle(length, 0, false);
+		gO = new Turtle(length);
 	}
 	return gO;
 }

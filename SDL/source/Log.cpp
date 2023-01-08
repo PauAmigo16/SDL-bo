@@ -8,16 +8,16 @@ Log::Log(int length) :length(length)
 
 	for (int i = 0; i < length; i++)
 	{
-		renderers.push_back(ImageRenderer());
+		renderers.push_back(new ImageRenderer());
 	}
 }
 
 void Log::Load()
 {
-	renderers[0].Load(startLogPath);
-	renderers[length - 1].Load(endLogPath);
+	renderers[0]->Load(startLogPath);
+	renderers[length - 1]->Load(endLogPath);
 	for (int i = 1; i < length - 1; i++)
-		renderers[1].Load(midLogPath);
+		renderers[i]->Load(midLogPath);
 }
 
 void Log::Update()

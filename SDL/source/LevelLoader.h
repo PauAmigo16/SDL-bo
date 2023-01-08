@@ -3,6 +3,9 @@
 #include <fstream>
 #include <sstream>
 #include "GameplayScene.h"
+#include "LogSpawner.h"
+#include "RoadSpawner.h"
+#include "TurtleSpawner.h"
 
 #define LL LevelLoader::GetInstance() 
 
