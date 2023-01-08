@@ -3,7 +3,7 @@
 void AnimatedImageRenderer::Load(std::string path)
 {
 	//Load the texture
-	SDL_Surface* surface = IMG_Load("resources/spritesheet.png");
+	SDL_Surface* surface = IMG_Load(path.c_str());
 	assert(surface);
 
 	texture = SDL_CreateTextureFromSurface(RM->GetRenderer(), surface);

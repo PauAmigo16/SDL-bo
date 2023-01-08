@@ -21,11 +21,6 @@ private:
     SDL_Rect AssetsTargetRect;
     SDL_Rect AssetsSourceRect;
 
-    std::vector<GameObject*> tilesLine1;
-    std::vector<GameObject*> tilesLine2;
-    std::vector<GameObject*> tilesLine3;
-    std::vector<GameObject*> tilesLine4;
-
     std::vector<GameObject*> gObjects;//Com no entenc els diferents vectors ja mho explicaras de moment amb un fem.
 
 public:

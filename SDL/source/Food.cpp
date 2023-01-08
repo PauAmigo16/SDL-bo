@@ -20,6 +20,7 @@ void Food::Update()
 
 void Food::Render()
 {
+    renderers[0]->Render();
 }
 
 bool Food::AttachedToPlayer()

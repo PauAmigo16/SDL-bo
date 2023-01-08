@@ -17,8 +17,11 @@ public:
     DivingTurtles(float diveDuration, float surfaceDuration, int length) :Turtle(length), diveDuration(diveDuration), surfaceDuration(surfaceDuration)
     {
         path = "../resources/DivingTurtleAnimation.png";
+
+        renderers.push_back(new AnimatedImageRenderer());
     }
 
+    void Load() override;
     void Update() override;
     void Render() override;
 

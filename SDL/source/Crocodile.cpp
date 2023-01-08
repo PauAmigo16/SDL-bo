@@ -30,4 +30,9 @@ void Crocodile::Update()
 
 void Crocodile::Render()
 {
+	renderers[1]->Render();
+	if (mouthOpen)
+		renderers[1]->Render();
+	else
+		renderers[2]->Render();
 }
