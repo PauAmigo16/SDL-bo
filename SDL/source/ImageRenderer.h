@@ -1,5 +1,7 @@
 #pragma once
+#include <assert.h>
 #include "Renderer.h"
+
 class ImageRenderer :
     public Renderer
 {

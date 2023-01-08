@@ -2,6 +2,7 @@
 #include <SDL_image.h>
 #include <string>
 #include "Vector2.h"
+#include "RenderManager.h"
 
 class Renderer
 {
