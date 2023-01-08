@@ -10,7 +10,7 @@ Log::Log(int length, int yPosition)
 	for (int i = 0; i < length; i++)
 	{
 		renderers.push_back(new ImageRenderer());
-	}	
+	}
 
 	position.y = yPosition;
 
@@ -35,10 +35,10 @@ void Log::Load()
 
 	//load positions
 	Vector2 i = position;
-	for (auto renderer : renderers) 
+	for (auto renderer : renderers)
 	{
 		renderer->SetPosition(position);
-		position.x -= 16;
+		position.x -= (16 * speed);
 	}
 	position = i;
 }
