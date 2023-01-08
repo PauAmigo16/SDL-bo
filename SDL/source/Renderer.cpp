@@ -16,6 +16,11 @@ void Renderer::SetPosition(Vector2 position)
 	targetRect.y = position.y;
 }
 
+void Renderer::AddPosition(int speed)
+{
+	targetRect.x += speed;
+}
+
 void Renderer::SetRotation(float rotation)
 {
 	this->rotation = rotation;

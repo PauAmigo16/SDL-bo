@@ -14,6 +14,10 @@ class GameObject
 protected:
 	std::vector<Renderer*> renderers;
 
+	Vector2 position;
+
+	int speed;
+
 public:
 	SDL_Texture* texture;
 	SDL_Rect destinationRect;

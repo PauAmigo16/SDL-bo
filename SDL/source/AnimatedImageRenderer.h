@@ -29,7 +29,7 @@ public:
         : frameWidth(frameWidth), frameHeight(frameHeight), fps(fps), looping(looping), ImageRenderer(color, alpha, rotation, targetRect, sourceRect), cols(cols), rows(rows){}
 
     void Load(std::string path) override;
-    void Update() override;
+    void Update(Vector2 position) override;
     void Render() override;
 };
 

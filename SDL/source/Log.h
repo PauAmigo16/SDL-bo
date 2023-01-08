@@ -12,7 +12,7 @@ private:
 	std::string endLogPath;
 
 public:
-	Log(int length);
+	Log(int length, int yPosition);
 
 	virtual void Load() override;
 	virtual void Update() override;

@@ -19,7 +19,7 @@ void AnimatedImageRenderer::Load(std::string path)
 	SDL_FreeSurface(surface);
 }
 
-void AnimatedImageRenderer::Update()
+void AnimatedImageRenderer::Update(Vector2 position)
 {
 	currentFrameTime += TM->GetDt();
 	int frameIncrement = (int)(currentFrameTime / maxFrameTime);

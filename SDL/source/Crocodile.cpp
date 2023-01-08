@@ -1,7 +1,7 @@
 #include "Crocodile.h"
 
-Crocodile::Crocodile(float openMouthDuration, float closedMouthDuration, int length)
-   : Log(length), openMouthDuration(openMouthDuration), closedMouthDuration(closedMouthDuration)
+Crocodile::Crocodile(float openMouthDuration, float closedMouthDuration, int length, int yPosition)
+   : Log(length,yPosition), openMouthDuration(openMouthDuration), closedMouthDuration(closedMouthDuration)
 {
 	bodyPath = "../resources/CrocBody.png";
 	openMouthPath = "../resources/CrocOpenMouth.png";
@@ -19,13 +19,18 @@ bool Crocodile::isMouthOpen()
 
 void Crocodile::Load()
 {
+	//laod all paths
 	renderers[0]->Load(bodyPath);
 	renderers[1]->Load(openMouthPath);
 	renderers[2]->Load(closedMouthPath);
+
+	//load positions
+	
 }
 
 void Crocodile::Update()
 {
+	position.x += speed;
 }
 
 void Crocodile::Render()

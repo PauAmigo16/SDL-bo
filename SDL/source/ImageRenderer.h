@@ -11,6 +11,6 @@ public:
         : Renderer(color, alpha, rotation, targetRect, sourceRect) {}
 
     virtual void Load(std::string path) override;
-    virtual void Update() override;
+    virtual void Update(Vector2 position) override;
     virtual void Render() override;
 };

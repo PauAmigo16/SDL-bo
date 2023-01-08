@@ -25,12 +25,13 @@ public:
 	}
 
 	virtual void Load(std::string path) = 0;
-	virtual void Update() = 0;
+	virtual void Update(Vector2 position) = 0;
 	virtual void Render() = 0;
 
 	void SetColor(SDL_Color color);
 	void SetAlpha(float alpha);
 	void SetPosition(Vector2 position);
+	void AddPosition(int speed);
 	void SetRotation(float rotation);
 	void SetScale(Vector2 scale);
 
