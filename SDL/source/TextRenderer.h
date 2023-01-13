@@ -8,15 +8,20 @@ class TextRenderer :
 private:
     std::string text;
 
+    TTF_Font* font;
+
+    int charSize;
+    int width;
+    int height;
+
 public:
-    TextRenderer(std::string text, SDL_Color color, float alpha, float rotation, SDL_Rect targetRect, SDL_Rect sourceRect) : Renderer(color, alpha, rotation, targetRect, sourceRect) {}
+    TextRenderer(std::string text, int size, SDL_Color color, float alpha, float rotation, SDL_Rect targetRect, SDL_Rect sourceRect) : Renderer(color, alpha, rotation, targetRect, sourceRect), text(text), charSize(size) {}
 
     void Load(std::string path) override;
     void Update() override;
     void Render() override;
 
     std::string GetText();
-
     void SetText(std::string text);
 };
 
