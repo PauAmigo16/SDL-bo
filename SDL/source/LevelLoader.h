@@ -1,11 +1,16 @@
 #pragma once
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include "GameplayScene.h"
+#include "../dependencies/inc/XML/rapidxml.hpp"
+#include "../dependencies/inc/XML/rapidxml_iterators.hpp"
+#include "../dependencies/inc/XML/rapidxml_print.hpp"
+#include "../dependencies/inc/XML/rapidxml_utils.hpp"
 #include "LogSpawner.h"
 #include "RoadSpawner.h"
 #include "TurtleSpawner.h"
+#include "GameplayScene.h"
+#include "EndTileItem.h"
+#include <iostream>
+#include <fstream>
+#include <sstream>
 
 #define LL LevelLoader::GetInstance() 
 

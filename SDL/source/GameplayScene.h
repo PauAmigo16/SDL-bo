@@ -34,6 +34,7 @@ public:
     std::vector<GameObject*> tiles;
     float maxTime;
     int endHazardChances;
+    int endBonusChances;
 
     void AddGameObject(GameObject* gO);
 

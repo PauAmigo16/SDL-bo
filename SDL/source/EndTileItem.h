@@ -17,7 +17,7 @@ private:
     ItemType type;
 
 public:
-    EndTileItem(float duration, ItemType type);
+    EndTileItem(float dangerChance, float flyChance) {};
 
     void Load() override;
     void Update() override;
