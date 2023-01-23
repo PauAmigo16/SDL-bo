@@ -25,7 +25,7 @@ void Crocodile::Load()
 	renderers[2]->Load(closedMouthPath);
 
 	//load positions
-	renderers[0]->SetPosition()
+	renderers[0]->SetPosition(position);
 }
 
 void Crocodile::Update()
