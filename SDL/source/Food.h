@@ -17,6 +17,7 @@ private:
 public:
 
     Food(Log* log);
+    ~Food();
 
     void Load() override;
     void Update() override;

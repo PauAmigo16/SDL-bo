@@ -38,6 +38,11 @@ public:
 
     void AddGameObject(GameObject* gO);
 
+    //TODO default gameplayscene
+    //TODO print everything
+    //TODO create AABB
+    //TODO make game work
+
     GameplayScene() = default;
     void OnEnter() override;
     void OnExit() override;

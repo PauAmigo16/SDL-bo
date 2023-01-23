@@ -20,7 +20,7 @@ public:
 	static TimeManager* GetInstance();
 
 	void Update();
-
+	//TODO current time
 	float GetCurrentTime();
 	float GetDt();
 };

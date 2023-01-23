@@ -22,6 +22,7 @@ public:
         for (int i = 0; i < size; i++)
             renderers.push_back(new AnimatedImageRenderer());
     }
+    ~DivingTurtles();
 
     void Load() override;
     void Update() override;

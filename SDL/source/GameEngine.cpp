@@ -14,6 +14,7 @@ void GameEngine::Init()
 	InitSDL();
 	InitWindowAndRenderer();
 	FillScenes();
+	//TODO fix xml path
 	LL->LoadLevel("../resources/sample_level.xml", dynamic_cast<GameplayScene*>(SM->GetScene("Gameplay Scene")));
 }
 
