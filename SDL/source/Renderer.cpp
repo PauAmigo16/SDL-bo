@@ -1,5 +1,10 @@
 #include "Renderer.h"
 
+Renderer::~Renderer()
+{
+	delete texture;
+}
+
 void Renderer::SetColor(SDL_Color color)
 {
 	this->color = color;

@@ -1,5 +1,10 @@
 #include "ImageRenderer.h"
 
+ImageRenderer::~ImageRenderer()
+{
+	delete texture;
+}
+
 void ImageRenderer::Load(std::string path)
 {
 	//Load image

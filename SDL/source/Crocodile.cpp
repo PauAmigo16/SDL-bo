@@ -12,6 +12,14 @@ Crocodile::Crocodile(float openMouthDuration, float closedMouthDuration, int len
 	}
 }
 
+Crocodile::~Crocodile()
+{
+	for (auto renderer : renderers)
+		delete renderer;
+
+	delete texture;
+}
+
 bool Crocodile::isMouthOpen()
 {
 	return mouthOpen;
@@ -31,6 +39,13 @@ void Crocodile::Load()
 void Crocodile::Update()
 {
 	position.x += speed;
+
+	for (auto renderer : renderers)
+		renderer->Update(position);
+
+	bool inScreen = position.x < -size || position.x > 480;
+	if (!inScreen)
+		delete this;
 }
 
 void Crocodile::Render()

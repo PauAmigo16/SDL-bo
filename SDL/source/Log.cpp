@@ -25,6 +25,14 @@ Log::Log(int length, int yPosition)
 		position.x = 0;
 }
 
+Log::~Log() 
+{
+	for (auto renderer : renderers)
+		delete renderer;
+
+	delete texture;
+}
+
 void Log::Load()
 {
 	//load all sprites
@@ -46,12 +54,22 @@ void Log::Load()
 void Log::Update()
 {
 	position.x += speed;
+
 	for (auto renderer : renderers)
-		renderer->AddPosition(speed);
+		renderer->Update(position);
+
+	bool inScreen = position.x < -size || position.x > 480;
+	if (!inScreen)
+		delete this;
 }
 
 void Log::Render()
 {
 	for (auto renderer : renderers)
 		renderer->Render();
+}
+
+bool Log::IsInside(int x, int objSize)
+{
+	return x <= position.x && (x + objSize) >= (position.x - size);
 }

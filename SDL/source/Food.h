@@ -12,6 +12,8 @@ private:
 
     std::string path;
     
+    int size = 16;
+
 public:
 
     Food(Log* log);

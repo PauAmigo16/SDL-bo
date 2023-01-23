@@ -14,11 +14,7 @@ void GameEngine::Init()
 	InitSDL();
 	InitWindowAndRenderer();
 	FillScenes();
-	LL->LoadLevel("resources/sample_level.xml", dynamic_cast<GameplayScene*>(SM->GetScene("Gameplay Scene")));
-	
-	//logo.LoadTexture(renderer, "resources/Assetsv2.png");
-
-
+	LL->LoadLevel("../resources/sample_level.xml", dynamic_cast<GameplayScene*>(SM->GetScene("Gameplay Scene")));
 }
 
 //Ensures that SDL is working and can run

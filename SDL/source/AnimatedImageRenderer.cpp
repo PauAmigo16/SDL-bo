@@ -1,5 +1,10 @@
 #include "AnimatedImageRenderer.h"
 
+AnimatedImageRenderer::~AnimatedImageRenderer()
+{
+	delete texture;
+}
+
 void AnimatedImageRenderer::Load(std::string path)
 {
 	//Load the texture
@@ -21,6 +26,9 @@ void AnimatedImageRenderer::Load(std::string path)
 
 void AnimatedImageRenderer::Update(Vector2 position)
 {
+	targetRect.x = position.x;
+	targetRect.y = position.y;
+
 	currentFrameTime += TM->GetDt();
 	int frameIncrement = (int)(currentFrameTime / maxFrameTime);
 

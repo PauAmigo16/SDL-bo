@@ -18,11 +18,10 @@ protected:
 	float rotation;
 
 public:
-	Renderer(SDL_Color color, float alpha, float rotation, SDL_Rect sourceRect, SDL_Rect targetRect) : 
-		color(color), alpha(alpha), rotation(rotation), sourceRect(sourceRect), targetRect(targetRect) 
-	{
-
-	}
+	Renderer(SDL_Color color, float alpha, float rotation, SDL_Rect sourceRect, SDL_Rect targetRect) :
+		color(color), alpha(alpha), rotation(rotation), sourceRect(sourceRect), targetRect(targetRect)
+	{}
+	~Renderer();
 
 	virtual void Load(std::string path) = 0;
 	virtual void Update(Vector2 position) = 0;

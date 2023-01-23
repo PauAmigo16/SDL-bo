@@ -18,7 +18,9 @@ public:
     {
         path = "../resources/DivingTurtleAnimation.png";
 
-        renderers.push_back(new AnimatedImageRenderer());
+        renderers.clear();
+        for (int i = 0; i < size; i++)
+            renderers.push_back(new AnimatedImageRenderer());
     }
 
     void Load() override;

@@ -17,6 +17,7 @@ private:
 
 public:
 	Crocodile(float openMouthDuration, float closedMouthDuration, int length, int yPosition);
+	~Crocodile();
 
 	bool isMouthOpen();
 
