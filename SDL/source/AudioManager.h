@@ -16,12 +16,12 @@ private:
 
 	std::queue<int> avaliableIDs;
 
-	AudioManager* instance;
+	static AudioManager* instance;
 
 	AudioManager() = default;
 
 public:
-	AudioManager* GetInstance();
+	static AudioManager* GetInstance();
 
 	int LoadClip(std::string path);
 	void PlayClip(int ID);

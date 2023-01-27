@@ -6,7 +6,8 @@ InputManager* InputManager::instance = nullptr;
 InputManager* InputManager::GetInstance()
 {
     if (instance == nullptr)
-        instance= new InputManager();
+        instance = new InputManager();
+
     return instance;
 }
 
@@ -72,4 +73,19 @@ int InputManager::GetMouseY()
 bool InputManager::GetQuitEvent()
 {
     return quitEvent;
+}
+
+Direction InputManager::GetDirection()
+{
+    if (CheckKeyState(SDLK_DOWN, DOWN))
+        return Direction::DOWN;
+
+    else if (CheckKeyState(SDLK_UP, DOWN))
+        return Direction::UP;
+
+    else if (CheckKeyState(SDLK_LEFT, DOWN))
+        return Direction::LEFT;
+
+    else if (CheckKeyState(SDLK_RIGHT, DOWN))
+        return Direction::RIGHT;
 }

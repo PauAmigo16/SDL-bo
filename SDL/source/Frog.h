@@ -11,15 +11,17 @@ private:
 
     bool moving;
     bool hasFood;
+    int score;
 
     Food* food;
 
     std::string path;
 
+    void Respawn();
+
 public:
     Frog();
 
-    void Respawn();
     void AddMovement(Vector2 dir);
     void Load();
     void Update() override;

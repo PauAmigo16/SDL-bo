@@ -36,6 +36,7 @@
     <ClCompile Include="source\LogSpawner.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\MainMenuScene.cpp" />
+    <ClCompile Include="source\MovementManager.cpp" />
     <ClCompile Include="source\RankingScene.cpp" />
     <ClCompile Include="source\Renderer.cpp" />
     <ClCompile Include="source\RenderManager.cpp" />
@@ -56,6 +57,7 @@
     <ClInclude Include="source\AnimatedImageRenderer.h" />
     <ClInclude Include="source\AudioManager.h" />
     <ClInclude Include="source\Crocodile.h" />
+    <ClInclude Include="source\Direction.h" />
     <ClInclude Include="source\DivingTurtles.h" />
     <ClInclude Include="source\EndTileItem.h" />
     <ClInclude Include="source\Food.h" />
@@ -69,6 +71,7 @@
     <ClInclude Include="source\Log.h" />
     <ClInclude Include="source\LogSpawner.h" />
     <ClInclude Include="source\MainMenuScene.h" />
+    <ClInclude Include="source\MovementManager.h" />
     <ClInclude Include="source\RankingScene.h" />
     <ClInclude Include="source\Renderer.h" />
     <ClInclude Include="source\RenderManager.h" />

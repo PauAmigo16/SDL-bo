@@ -3,7 +3,7 @@
 GameObject* LogSpawner::Spawn()
 {
 	GameObject* gO;
-	float length = (rand() % (int)maxSpawnTime) - minSpawnTime;
+	float length = (rand() % (int)maxLength) - minLength;
 
 	int randomNum = rand() % 100;
 
