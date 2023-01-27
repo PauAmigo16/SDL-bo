@@ -10,8 +10,11 @@ private:
 
     std::string path;
 
+    int size = 32;
+
 public:
     Snake(Log* log);
+    ~Snake();
 
     void Load() override;
     void Update() override;

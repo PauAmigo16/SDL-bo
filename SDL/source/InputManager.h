@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include <iostream>
 #include "SDL.h"
+#include "Direction.h"
 
 #define IM InputManager::GetInstance()
 
@@ -39,4 +40,5 @@ public:
     bool CheckKeyState(Sint32 key, KeyState state);
     bool GetQuitEvent();
 
+    Direction GetDirection();
 };

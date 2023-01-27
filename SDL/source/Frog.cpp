@@ -5,7 +5,7 @@
 Frog::Frog()
 {
     path = "../resources/FrogAnimation.png";
-    renderers.push_back(new ImageRenderer());
+    renderers.push_back(new AnimatedImageRenderer());
 }
 
 void Frog::Update()
@@ -14,6 +14,7 @@ void Frog::Update()
 
 void Frog::Render()
 {
+    renderers[0]->Render();
 }
 
 void Frog::Respawn()

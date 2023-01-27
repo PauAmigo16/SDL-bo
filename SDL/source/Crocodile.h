@@ -16,7 +16,8 @@ private:
 	std::string closedMouthPath;
 
 public:
-	Crocodile(float openMouthDuration, float closedMouthDuration, int length);
+	Crocodile(float openMouthDuration, float closedMouthDuration, int length, int yPosition);
+	~Crocodile();
 
 	bool isMouthOpen();
 

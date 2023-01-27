@@ -1,9 +1,14 @@
 #include "AnimatedImageRenderer.h"
 
+AnimatedImageRenderer::~AnimatedImageRenderer()
+{
+	delete texture;
+}
+
 void AnimatedImageRenderer::Load(std::string path)
 {
 	//Load the texture
-	SDL_Surface* surface = IMG_Load("resources/spritesheet.png");
+	SDL_Surface* surface = IMG_Load(path.c_str());
 	assert(surface);
 
 	texture = SDL_CreateTextureFromSurface(RM->GetRenderer(), surface);
@@ -19,8 +24,11 @@ void AnimatedImageRenderer::Load(std::string path)
 	SDL_FreeSurface(surface);
 }
 
-void AnimatedImageRenderer::Update()
+void AnimatedImageRenderer::Update(Vector2 position)
 {
+	targetRect.x = position.x;
+	targetRect.y = position.y;
+
 	currentFrameTime += TM->GetDt();
 	int frameIncrement = (int)(currentFrameTime / maxFrameTime);
 

@@ -12,9 +12,12 @@ private:
 
     std::string path;
     
+    int size = 16;
+
 public:
 
     Food(Log* log);
+    ~Food();
 
     void Load() override;
     void Update() override;

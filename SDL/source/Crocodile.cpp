@@ -1,7 +1,7 @@
 #include "Crocodile.h"
 
-Crocodile::Crocodile(float openMouthDuration, float closedMouthDuration, int length)
-   : Log(length), openMouthDuration(openMouthDuration), closedMouthDuration(closedMouthDuration)
+Crocodile::Crocodile(float openMouthDuration, float closedMouthDuration, int length, int yPosition)
+   : Log(length,yPosition), openMouthDuration(openMouthDuration), closedMouthDuration(closedMouthDuration)
 {
 	bodyPath = "../resources/CrocBody.png";
 	openMouthPath = "../resources/CrocOpenMouth.png";
@@ -12,6 +12,14 @@ Crocodile::Crocodile(float openMouthDuration, float closedMouthDuration, int len
 	}
 }
 
+Crocodile::~Crocodile()
+{
+	for (auto renderer : renderers)
+		delete renderer;
+
+	delete texture;
+}
+
 bool Crocodile::isMouthOpen()
 {
 	return mouthOpen;
@@ -19,15 +27,32 @@ bool Crocodile::isMouthOpen()
 
 void Crocodile::Load()
 {
+	//laod all paths
 	renderers[0]->Load(bodyPath);
 	renderers[1]->Load(openMouthPath);
 	renderers[2]->Load(closedMouthPath);
+
+	//load positions
+	renderers[0]->SetPosition(position);
 }
 
 void Crocodile::Update()
 {
+	position.x += speed;
+
+	for (auto renderer : renderers)
+		renderer->Update(position);
+
+	bool inScreen = position.x < -size || position.x > 480;
+	if (!inScreen)
+		delete this;
 }
 
 void Crocodile::Render()
 {
+	renderers[1]->Render();
+	if (mouthOpen)
+		renderers[1]->Render();
+	else
+		renderers[2]->Render();
 }

@@ -1,5 +1,10 @@
 #include "Renderer.h"
 
+Renderer::~Renderer()
+{
+	delete texture;
+}
+
 void Renderer::SetColor(SDL_Color color)
 {
 	this->color = color;
@@ -14,6 +19,11 @@ void Renderer::SetPosition(Vector2 position)
 {
 	targetRect.x = position.x;
 	targetRect.y = position.y;
+}
+
+void Renderer::AddPosition(int speed)
+{
+	targetRect.x += speed;
 }
 
 void Renderer::SetRotation(float rotation)

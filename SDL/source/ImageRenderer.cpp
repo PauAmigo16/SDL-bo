@@ -1,5 +1,10 @@
 #include "ImageRenderer.h"
 
+ImageRenderer::~ImageRenderer()
+{
+	delete texture;
+}
+
 void ImageRenderer::Load(std::string path)
 {
 	//Load image
@@ -14,8 +19,10 @@ void ImageRenderer::Load(std::string path)
 	SDL_FreeSurface(surface);
 }
 
-void ImageRenderer::Update()
+void ImageRenderer::Update(Vector2 position)
 {
+	targetRect.x = position.x;
+	targetRect.y = position.y;
 }
 
 void ImageRenderer::Render()

@@ -4,11 +4,15 @@
 class Turtle : public GameObject
 {
 private:
-	int length;
 	std::string path;
+
+protected:
+	int length;
+	int size = length * 16;
 
 public:
 	Turtle(int length);
+	~Turtle();
 
 	virtual void Update() override;
 	virtual void Load() override;
