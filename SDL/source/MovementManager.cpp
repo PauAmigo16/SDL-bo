@@ -11,21 +11,5 @@ MovementManager* MovementManager::GetInstance()
 
 void MovementManager::MoveFrog(Frog* frog, Direction direction)
 {
-	switch (direction)
-	{
-	case Direction::UP:
-		frog->AddMovement(Vector2(0, -1));
-		break;
-	case Direction::DOWN:
-		frog->AddMovement(Vector2(0, 1));
-		break;
-	case Direction::LEFT:
-		frog->AddMovement(Vector2(-1, 0));
-		break;
-	case Direction::RIGHT:
-		frog->AddMovement(Vector2(1, 0));
-		break;
-	default:
-		break;
-	}
+    frog->AddDirection(direction);
 }
