@@ -18,7 +18,7 @@ private:
 
 	static AudioManager* instance;
 
-	AudioManager() = default;
+	AudioManager() : muted(false) {}
 
 public:
 	static AudioManager* GetInstance();

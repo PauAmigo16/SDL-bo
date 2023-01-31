@@ -2,7 +2,7 @@
 <Level>
   <MaxTime>20</MaxTime>
   <Layout>
-    <EndZone hazardChance="20"/>
+    <EndZone hazardChance="20" flyChance="20"/>
     <LogRiver minLength="2" maxLength="3">
       <SpawnRate min="2" max="4"/>
       <CrocodileChance>30</CrocodileChance>
@@ -29,7 +29,6 @@
     </LogRiver>
 	  
 	  
-    <SafeZone/>
     <Road cardID="0">
       <SpawnRate min="4" max="6"/>
       <Speed>2</Speed>
@@ -50,8 +49,7 @@
       <SpawnRate min="4" max="5"/>
       <Speed>3</Speed>
     </Road>
-    <SafeZone/>
-	  
+
 	  
   </Layout>
 </Level>
