@@ -49,6 +49,6 @@ void GameplayScene::Update()
 void GameplayScene::Render(SDL_Renderer* renderer, int width, int height)
 {
 	PrintMap(renderer, width, height);
-	/*for (auto gO : gObjects)
-		gO->Render();*/
+	for (auto gO : gObjects)
+		gO->Render();
 }
