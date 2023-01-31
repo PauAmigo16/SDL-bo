@@ -15,7 +15,7 @@ void GameEngine::Init()
 	InitWindowAndRenderer();
 	FillScenes();
 	//TODO fix xml path
-	LL->LoadLevel("../resources/sample_level.xml", dynamic_cast<GameplayScene*>(SM->GetScene("Gameplay Scene")));
+	LL->LoadLevel("./resources/sample_level.xml", dynamic_cast<GameplayScene*>(SM->GetScene("Gameplay Scene")));
 }
 
 //Ensures that SDL is working and can run
@@ -95,7 +95,7 @@ void GameEngine::FillScenes() {
 	//SM->AddScene("Main Menu", new MainMenuScene());
 	SM->AddScene("Gameplay Scene", gameplay);
 
-	LL->LoadLevel(". / resources/sample_level.xml", gameplay);
+	LL->LoadLevel("./resources/sample_level.xml", gameplay);
 
 	SM->SetScene("Gameplay Scene");
 }
