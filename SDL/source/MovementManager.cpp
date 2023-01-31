@@ -6,6 +6,7 @@ MovementManager* MovementManager::GetInstance()
 {
     if (instance == nullptr)
         instance = new MovementManager();
+
     return instance;
 }
 

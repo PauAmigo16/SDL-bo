@@ -7,6 +7,7 @@
 //! \file rapidxml_iterators.hpp This file contains rapidxml iterators
 
 #include "rapidxml.hpp"
+#include <iterator>
 
 namespace rapidxml
 {
